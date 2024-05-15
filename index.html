@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.css" rel="stylesheet">
+
+
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="apply_box">
+
+            <h1>Job Application <span class="title_small">(Web)</span></h1>
+
+            <form id="registrationForm" action="">
+                <div class="straight">
+                    <div class="form_container">
+
+                        <div class="form_control">
+
+                            <label for="first-name">First Name : </label>
+                            <input type="text" id="first-name" placeholder="Enter First Name...">
+                            <span class="error-message" id="first-name-error"></span>
+
+                        </div>
+
+                        <div class="form_control">
+
+                            <label for="last-name">Last Name : </label>
+                            <input type="text" id="last-name" placeholder="Enter Last Name...">
+                            <span class="error-message" id="last-name-error"></span>
+
+                        </div>
+
+                        <div class="form_control">
+
+                            <label for="email">Email : </label>
+                            <input type="email" id="email" placeholder="Enter Email...">
+                            <span class="error-message" id="email-error"></span>
+
+                        </div>
+
+                        <div class="form_control">
+
+                            <label for="job-role">Job Role : </label>
+                            <select id="job-role">
+                                <option value="">Select Job Role</option>
+                                <option value="frontend">Frontend Developer</option>
+                                <option value="backend">Backend Developer</option>
+                                <option value="full_stack">Full Stack Developer</option>
+                                <option value="ui_ux">UI UX Designer</option>
+                            </select>
+                            <span class="error-message" id="job-role-error"></span>
+
+                        </div>
+
+                        <div class="textarea_control">
+
+                            <label for="address">Address : </label>
+                            <textarea id="address" cols="50" rows="4" placeholder="Enter Address..."></textarea>
+
+                        </div>
+
+                        <div class="form_control">
+
+                            <label for="city">City : </label>
+                            <input type="text" id="city" placeholder="Enter City Name...">
+
+                        </div>
+
+                        <div class="form_control">
+
+                            <label for="pincode">Pincode : </label>
+                            <input type="number" id="pincode" placeholder="Enter Pincode...">
+
+                        </div>
+
+                        <div class="form_control">
+
+                            <label for="date">Date : </label>
+                            <input type="date" id="date">
+
+                        </div>
+
+                        <div class="form_control">
+                            <label for="gender">Gender : </label>
+                            <select id="gender">
+                                <option value="">Select Gender</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form_control">
+                            <label for="education">Highest Education : </label>
+                            <input type="text" id="education" placeholder="Enter Highest Education...">
+                        </div>
+
+                        <div class="form_control">
+                            <label for="experience">Years of Experience : </label>
+                            <input type="number" id="experience" placeholder="Enter Years of Experience...">
+                        </div>
+
+                        <div class="form_control">
+
+                            <label>Marital Status : </label>
+                            <div>
+                                <input type="radio" id="marital-yes" name="marital-status" value="yes">
+                                <label for="marital-yes">Yes</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="marital-no" name="marital-status" value="no">
+                                <label for="marital-no">No</label>
+                            </div>
+
+
+                        </div>
+
+                        <div class="form_control">
+
+                            <label for="expected-salary">Expected Salary (Per Year) : </label>
+                            <input type="range" id="expected-salary" min="100000" max="400000">
+
+                            <output for="expected-salary" id="salary-output"></output>
+
+                        </div>
+
+                        <div class="form_control">
+
+                            <label for="portfolio">Portfolio Website Link : </label>
+                            <input type="url" id="portfolio" placeholder="Enter Portfolio Website Link...">
+
+
+                        </div>
+
+                        <div class="form_control">
+
+                            <label for="file">Upload Resume : </label>
+                            <input type="file" id="file">
+
+                        </div>
+
+                    </div>
+
+                    <div class="hero">
+                       
+
+                        <div class="content">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <div class="confirm-identity">
+                                            <div class="ci-user d-flex align-items-center justify-content-center">
+                                                <div class="ci-user-picture">
+                                                    <img src="profile.png" id="item-img-output"
+                                                        class="imgpreviewPrf img-fluid rounded-circle" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="ci-user-btn text-center mt-4">
+                                                <a href="javascript:;"
+                                                    class="userEditeBtn btn-default bg-blue text-decoration-none position-relative">
+                                                    <input type="file"
+                                                        class="item-img file center-block filepreviewprofile">
+                                                    Update Profile Photo
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal fade cropImageModal" id="cropImagePop" tabindex="-1" role="dialog"
+                            aria-labelledby="myModalLabel" aria-hidden="true">
+                            <button type="button" class="close-modal-custom" data-dismiss="modal" aria-label="Close"><i
+                                    class="feather icon-x"></i>X</button>
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-body p-0">
+                                        <div class="modal-header-bg"></div>
+                                        <div class="up-photo-title">
+                                            <h3 class="modal-title">Update Profile Photo</h3>
+                                        </div>
+                                        <div class="up-photo-content pb-5">
+                                            <div id="upload-demo" class="center-block">
+                                                <h5><i class="fas fa-arrows-alt mr-1"></i> Drag your photo as you
+                                                    require</h5>
+                                            </div>
+                                            <div class="upload-action-btn text-center px-2">
+                                                <button type="button" id="cropImageBtn"
+                                                    class="btn btn-primary btn-medium px-3 my-3 mr-2">Save
+                                                    Photo</button>
+                                                <button type="button"
+                                                    class="btn btn-primary btn-medium px-3 my-3 ml-sm-2 replacePhoto position-relative">Replace
+                                                    Photo</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+
+
+
+
+
+                </div>
+
+                <div class="button_conatiner">
+                    <button type="submit">Apply Now</button>
+                </div>
+
+
+            </form>
+
+
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.min.js"></script>
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@cropperjs/cropper@^2.5.0/dist/cropper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.js"></script> -->
+    <script src="script.js"></script>
+</body>
+
+</html>

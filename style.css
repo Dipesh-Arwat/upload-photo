@@ -1,0 +1,297 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background: linear-gradient(30deg, rgb(86, 81, 225) 0%, rgb(20, 5, 36) 100%);
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.apply_box {
+    max-width: 1000px;
+    padding: 20px;
+    background-color: ghostwhite;
+    margin: 0 auto;
+    margin-top: 50px;
+    box-shadow: 4px 3px 5px black;
+    border-radius: 10px;
+}
+
+#registrationForm {
+    width: 900px;
+}
+
+.straight {
+
+    display: flex;
+    justify-content: space-around;
+}
+
+.title_small {
+    font-size: 20px;
+}
+
+.form_container {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.form_control {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: rgb(9, 9, 101);
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    padding: 6px 10px;
+    border: 1px solid rgb(198, 196, 196);
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+input:focus {
+    outline-color: red;
+}
+
+.button_conatiner {
+    display: flex;
+    justify-content: end;
+    margin-top: 20px;
+}
+
+button {
+    background-color: red;
+    border: transparent solid 2px;
+    padding: 5px 10px;
+    color: white;
+    border-radius: 7px;
+    transition: 0.3s ease-in;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ccc;
+    border: 2px solid red;
+    color: black;
+    transition: 0.3s ease-in;
+}
+
+.textarea_control {
+    grid-column: 1 / span 2;
+}
+
+.textarea_control textarea {
+    width: 100%;
+}
+
+/* .hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+
+.card {
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    width: 220px;
+    background: gainsboro;
+    padding: 10px;
+    border-radius: 15px;
+    text-align: center;
+    color: #333;
+}
+
+.card img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.upload-name {
+    display: block;
+    width: 150px;
+    background: #e3362c;
+    color: white;
+    padding: 12px;
+    margin: 10px auto;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.card input {
+    display: none;
+}
+
+
+ /*------------------  */
+.ci-user-picture {
+    min-width: 150px;
+    margin-right: 16px;
+    display: inline-block;
+}
+.ci-user-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+.btn-default {
+    display: inline-block;
+    padding: 14px 32px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: 0.5s;
+    text-align: center;
+    text-transform: capitalize;
+}
+.bg-blue {
+    background-color: #006AFA;
+    color: #fff !important;
+}
+.filepreviewprofile {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+
+/*----modal--------*/
+.modal-header-bg {
+    width: 100%;
+    height: 12px;
+    background: linear-gradient(269.44deg, #006AFA 2.3%, #00AE86 99.19%);
+}
+.cropImageModal .modal-dialog{
+    max-width: 750px;
+    width: 90%;
+    margin: 0.5rem auto;
+}
+.up-photo-title{
+    padding: 8px 15px;
+    text-align: center;
+}
+
+#upload-demo{
+    position: relative;
+	width: 100%;
+	height: 250px;
+  padding-bottom:0;
+}
+.croppie-content {
+    position: absolute;
+    bottom: 4px;
+    text-align: center;
+    left: 0;
+    right: 0;
+    color: #fff;
+    z-index: 2;
+    font-size: 15px;
+}
+figure figcaption {
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+    width: 100%;
+    padding-left: 9px;
+    padding-bottom: 5px;
+    text-shadow: 0 0 10px #000;
+}
+.croppie-content .cr-image{
+    right: 0;
+}
+.croppie-content .cr-slider-wrap {
+    width: 275px;
+}
+.cr-slider-wrap p{
+    font-size: 13px;
+    color: #8D8D94;
+    text-align: left;
+}
+.cr-slider{
+    width: 275px;
+}
+.upload-action-btn {
+    margin-top: 60px;
+    padding-top: 40px;
+}
+
+.cr-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    background: #006AFA;
+    cursor: pointer;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.25);
+}
+  
+.cr-slider::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    background: #006AFA;
+    cursor: pointer;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.25);
+}
+.cr-slider::-ms-thumb {
+    width: 18px;
+    height: 18px;
+    background: #006AFA;
+    cursor: pointer;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.25);
+}
+.cr-slider::-webkit-slider-runnable-track {
+    width: 275px;
+    height: 2px;
+    cursor: pointer;
+    box-shadow: none;
+    background: #E0E0E0;
+    border-radius: 3px;
+    border:none;
+}
+.cr-slider:focus::-webkit-slider-runnable-track {
+    background: #E0E0E0;
+}
+.cr-slider::-moz-range-track {
+    width: 275px;
+    height: 2px;
+    cursor: pointer;
+    box-shadow: none;
+    background: #E0E0E0;
+    border-radius: 3px;
+    border:none;
+}
+.cr-slider::-ms-track {
+    width: 275px;
+    height: 2px;
+    cursor: pointer;
+    box-shadow: none;
+    background: #E0E0E0;
+    border-radius: 3px;
+    border:none;
+    color: transparent;
+}
+
